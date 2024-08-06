@@ -1,7 +1,7 @@
 package com.example.lab_ux;
 
 public class DataClass {
-//test
+//test 233
     private String dataTitle;
     private int dataDesc;
     private String dataPrice;

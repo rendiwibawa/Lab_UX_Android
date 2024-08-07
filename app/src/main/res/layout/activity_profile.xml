@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/black"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".ItemPage.MainActivity">
 
     <View
         android:layout_width="match_parent"
@@ -32,6 +32,7 @@
             android:background="@drawable/background_white">
 
             <TextView
+                android:id="@+id/emailUser"
                 android:layout_marginTop="95dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -55,7 +56,7 @@
                     android:layout_width="264dp"
                     android:background="@drawable/textfiled"
                     android:layout_height="40dp">
-                    
+
                     <ImageView
                         android:layout_marginLeft="16dp"
                         android:layout_marginRight="19dp"
@@ -70,6 +71,7 @@
                         />
 
                     <TextView
+                        android:id="@+id/email"
                         android:textSize="12dp"
                         android:layout_marginLeft="11dp"
                         android:layout_width="match_parent"
@@ -160,7 +162,7 @@
                         android:layout_height="wrap_content"
                         android:text="User@Gmail.com"/>
                 </LinearLayout>
-                
+
                 <Button
                     android:layout_gravity="center"
                     android:layout_marginTop="44dp"
@@ -177,9 +179,5 @@
         </LinearLayout>
 
     </LinearLayout>
-
-
-
-
 
 </LinearLayout>

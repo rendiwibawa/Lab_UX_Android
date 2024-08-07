@@ -12,10 +12,18 @@
         android:theme="@style/Theme.Lab_UX"
         tools:targetApi="31">
         <activity
-            android:name=".DetailActivity"
+            android:name=".HomePage.HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Profile.ProfileActivity"
+            android:exported="false" /> <!-- <activity -->
+        <!-- android:name=".Login.LoginActivity" -->
+        <!-- android:exported="false" /> -->
+        <activity
+            android:name=".ItemPage.DetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Login.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

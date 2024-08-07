@@ -1,4 +1,4 @@
-package com.example.lab_ux;
+package com.example.lab_ux.ItemPage;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,6 +8,8 @@ import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toolbar;
+
+import com.example.lab_ux.R;
 
 public class DetailActivity extends AppCompatActivity {
 

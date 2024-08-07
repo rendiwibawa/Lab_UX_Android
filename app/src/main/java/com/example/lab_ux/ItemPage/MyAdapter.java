@@ -1,4 +1,4 @@
-package com.example.lab_ux;
+package com.example.lab_ux.ItemPage;
 
 import android.content.Context;
 import android.content.Intent;
@@ -14,6 +14,8 @@ import java.util.List;
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.lab_ux.R;
 
 public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
 

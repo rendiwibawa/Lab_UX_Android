@@ -54,5 +54,4 @@ public class MainActivity extends AppCompatActivity {
         adapter = new MyAdapter(MainActivity.this, dataList);
         recyclerView.setAdapter(adapter);
     }
-
 }

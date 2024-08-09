@@ -40,4 +40,8 @@
         which can be customized vastly while improving on the efficiency of ListViews and GridViews.
     </string>
     <string name="warning_icon">Warning Ini</string>
+
+    <!-- to toggle the open close button of the navigation drawer -->
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
 </resources>

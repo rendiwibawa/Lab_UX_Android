@@ -1,4 +1,4 @@
-package com.example.lab_ux;
+package com.example.lab_ux.ItemPage;
 
 public class DataClass {
 //test 233

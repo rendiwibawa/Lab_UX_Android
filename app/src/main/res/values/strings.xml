@@ -1,6 +1,13 @@
 <resources>
     <string name="app_name">Lab UX</string>
 
+    <string name="choose_payment_prompt">Choose Payment</string>
+
+    <string-array name="payment_methods">
+        <item>Visa</item>
+        <item>Master Card</item>
+        <item>Credit Card</item>
+    </string-array>
 
     <string name="BrickKit">A thin wrapper around a millisecond value that allows JDBC to identify this as an SQL DATE
         value. A milliseconds value represents the number of milliseconds that have passed since January 1, 1970 00:00:00.000 GMT.

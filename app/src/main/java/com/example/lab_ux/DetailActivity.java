@@ -19,9 +19,9 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
-        Toolbar toolbar = new Toolbar(this);
-        toolbar.setTitle("Detail Asset");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        Toolbar toolbar = new Toolbar(this);
+//        toolbar.setTitle("Detail Asset");
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         detailDesc = findViewById(R.id.detailDesc);
         detailTitle = findViewById(R.id.detailTitle);

@@ -55,6 +55,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
                 intent.putExtra("Image", dataList.get(holder.getAdapterPosition()).getDataImage());
                 intent.putExtra("Title", dataList.get(holder.getAdapterPosition()).getDataTitle());
                 intent.putExtra("Desc", dataList.get(holder.getAdapterPosition()).getDataDesc());
+                intent.putExtra("Price", dataList.get(holder.getAdapterPosition()).getDataPrice());
 
                 context.startActivity(intent);
             }

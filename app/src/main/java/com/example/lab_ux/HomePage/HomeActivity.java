@@ -164,7 +164,7 @@ public class HomeActivity extends AppCompatActivity {
         cancelButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                v.startAnimation(AnimationUtils.loadAnimation(HomeActivity.this, R.anim.flip_up_out));
+//                v.startAnimation(AnimationUtils.loadAnimation(HomeActivity.this, R.anim.flip_up_out));
                 dialog.dismiss();
             }
         });
@@ -172,7 +172,7 @@ public class HomeActivity extends AppCompatActivity {
         okButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                v.startAnimation(AnimationUtils.loadAnimation(HomeActivity.this, R.anim.flip_up_out));
+//                v.startAnimation(AnimationUtils.loadAnimation(HomeActivity.this, R.anim.flip_up_out));
                 dialog.dismiss();
                 // Handle logout action here, e.g., navigate to login screen
                 Intent intent = new Intent(HomeActivity.this, LoginActivity.class);
@@ -182,6 +182,6 @@ public class HomeActivity extends AppCompatActivity {
         });
 
         dialog.show();
-        dialog.findViewById(R.id.dialog_container).startAnimation(AnimationUtils.loadAnimation(this, R.anim.flip_up_in));
+//        dialog.findViewById(R.id.dialog_container).startAnimation(AnimationUtils.loadAnimation(this, R.anim.flip_up_in));
     }
 }

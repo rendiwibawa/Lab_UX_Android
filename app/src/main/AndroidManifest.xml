@@ -14,9 +14,9 @@
         <activity
             android:name=".ItemPage.MainActivity"
             android:exported="false" />
-<!--        <activity-->
-<!--            android:name=".HomePage.HomeActivity"-->
-<!--            android:exported="false" />-->
+        <activity
+            android:name=".HomePage.HomeActivity"
+            android:exported="false" />
         <activity
             android:name=".Profile.ProfileActivity"
             android:exported="false" />
@@ -24,7 +24,7 @@
             android:name=".ItemPage.DetailActivity"
             android:exported="false" />
         <activity
-            android:name=".HomePage.HomeActivity"
+            android:name=".Login.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

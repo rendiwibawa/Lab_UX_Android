@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity"
+    android:padding="12pt"
+    android:background="#282B30"
+    android:orientation="vertical">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#282B30">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14pt"
+            android:text="Welcome"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/poppins_bold"
+            android:id="@+id/welcome"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="On Sale Items"
+            android:textColor="#7289DA"
+            android:fontFamily="@font/poppins_semibold"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="8dp"
+            android:textSize="10pt"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:background="#282B30"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="36dp"
+                android:src="@drawable/prev"
+                android:layout_marginRight="20dp"
+                android:id="@+id/prev"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="260dp"
+                android:layout_height="147dp"
+                android:background="#282B30"
+                app:cardCornerRadius="20dp">
+                    <ViewFlipper
+                        android:layout_width="260dp"
+                        android:layout_height="147dp"
+                        android:id="@+id/carousel"
+                        android:flipInterval="3000"
+                        android:autoStart="true"
+                        android:inAnimation="@anim/slide_in_right"
+                        android:outAnimation="@anim/slide_out_left"
+                        android:background="@drawable/carousel_border"/>
+            </androidx.cardview.widget.CardView>
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="36dp"
+                android:src="@drawable/next"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/next"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

@@ -1,4 +1,4 @@
-package com.example.lab_ux;
+package com.example.lab_ux.HomePage;
 
 import android.content.Context;
 import android.view.GestureDetector;
@@ -13,7 +13,7 @@ public class OnSwipeTouchListener implements View.OnTouchListener {
     private ViewFlipper carousel;
     private GestureDetector gestureDetector;
 
-    OnSwipeTouchListener(Context c) {
+    protected OnSwipeTouchListener(Context c) {
         gestureDetector = new GestureDetector(c, new GestureListener());
     }
 

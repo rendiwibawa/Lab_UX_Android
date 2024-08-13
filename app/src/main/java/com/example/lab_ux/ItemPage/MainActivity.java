@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Setup toolbar with back button
         if (getSupportActionBar() != null) {
-            getSupportActionBar().setTitle("Asset");
+            getSupportActionBar().setTitle("Items");
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
 

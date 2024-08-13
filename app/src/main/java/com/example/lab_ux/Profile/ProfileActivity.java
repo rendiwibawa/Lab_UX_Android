@@ -1,16 +1,23 @@
 package com.example.lab_ux.Profile;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toolbar;
 
+import com.example.lab_ux.HomePage.HomeActivity;
+import com.example.lab_ux.ItemPage.MainActivity;
 import com.example.lab_ux.Login.LoginActivity;
 import com.example.lab_ux.R;
 
@@ -18,6 +25,14 @@ public class ProfileActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
+        // Setup toolbar with back button
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setTitle("Profile");
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
@@ -39,6 +54,42 @@ public class ProfileActivity extends AppCompatActivity {
             }
         });
 
+    }
+    //    MENUU
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.navigation_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if(item.getItemId() == android.R.id.home){
+            onBackPressed();
+            return true;
+        }
+
+        switch (item.getItemId()) {
+            case R.id.nav_home:
+                Intent homeIntent = new Intent(ProfileActivity.this, HomeActivity.class);
+                startActivity(homeIntent);
+                return true;
+            case R.id.nav_items:
+                Intent itemsIntent = new Intent(ProfileActivity.this, MainActivity.class);
+                startActivity(itemsIntent);
+                return true;
+            case R.id.nav_profile:
+                Intent profileIntent = new Intent(ProfileActivity.this, ProfileActivity.class);
+                startActivity(profileIntent);
+                return true;
+            case R.id.nav_logout:
+                showLogoutDialog();
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
     private void showLogoutDialog() {
@@ -72,4 +123,6 @@ public class ProfileActivity extends AppCompatActivity {
         dialog.show();
         dialog.findViewById(R.id.dialog_container).startAnimation(AnimationUtils.loadAnimation(this, R.anim.flip_up_in));
     }
+
+
 }

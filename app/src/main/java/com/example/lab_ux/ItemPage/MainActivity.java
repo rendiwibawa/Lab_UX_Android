@@ -1,16 +1,26 @@
 package com.example.lab_ux.ItemPage;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
-import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.TextView;
+import android.widget.Toolbar;
 
+import com.example.lab_ux.HomePage.HomeActivity;
+import com.example.lab_ux.Login.LoginActivity;
+import com.example.lab_ux.Profile.ProfileActivity;
 import com.example.lab_ux.R;
 
 import java.util.ArrayList;
@@ -24,10 +34,6 @@ public class MainActivity extends AppCompatActivity {
     DataClass androidData;
     SearchView searchView;
 
-
-    public DrawerLayout drawerLayout;
-    public ActionBarDrawerToggle actionBarDrawerToggle;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,16 +41,11 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.recyclerView);
 
-        // drawer and back button to close drawer
-        drawerLayout = findViewById(R.id.my_drawer_layout);
-        actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.nav_open, R.string.nav_close);
-
-        // pass the Open and Close toggle for the drawer layout listener
-        // to toggle the button
-        drawerLayout.addDrawerListener(actionBarDrawerToggle);
-        actionBarDrawerToggle.syncState();
-
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        // Setup toolbar with back button
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setTitle("Asset");
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
 
         GridLayoutManager gridLayoutManager = new GridLayoutManager(MainActivity.this, 1);
         recyclerView.setLayoutManager(gridLayoutManager);
@@ -74,12 +75,73 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
     }
 
+
+//    MENUU
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.navigation_menu, menu);
+        return true;
+    }
+
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-
-        if (actionBarDrawerToggle.onOptionsItemSelected(item)) {
+        if(item.getItemId() == android.R.id.home){
+            onBackPressed();
             return true;
         }
-        return super.onOptionsItemSelected(item);
+
+        switch (item.getItemId()) {
+            case R.id.nav_home:
+                Intent homeIntent = new Intent(MainActivity.this, HomeActivity.class);
+                startActivity(homeIntent);
+                return true;
+            case R.id.nav_items:
+                Intent itemsIntent = new Intent(MainActivity.this, MainActivity.class);
+                startActivity(itemsIntent);
+                return true;
+            case R.id.nav_profile:
+                Intent profileIntent = new Intent(MainActivity.this, ProfileActivity.class);
+                startActivity(profileIntent);
+                return true;
+            case R.id.nav_logout:
+                showLogoutDialog();
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
+
+    private void showLogoutDialog() {
+        final Dialog dialog = new Dialog(this);
+        dialog.setContentView(R.layout.custom_logout_dialog);
+        dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+
+        TextView cancelButton = dialog.findViewById(R.id.cancelButton);
+        TextView okButton = dialog.findViewById(R.id.okButton);
+
+        cancelButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                v.startAnimation(AnimationUtils.loadAnimation(MainActivity.this, R.anim.flip_up_out));
+                dialog.dismiss();
+            }
+        });
+
+        okButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                v.startAnimation(AnimationUtils.loadAnimation(MainActivity.this, R.anim.flip_up_out));
+                dialog.dismiss();
+                // Handle logout action here, e.g., navigate to login screen
+                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        dialog.show();
+        dialog.findViewById(R.id.dialog_container).startAnimation(AnimationUtils.loadAnimation(this, R.anim.flip_up_in));
+    }
+
 }

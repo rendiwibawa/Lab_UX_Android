@@ -37,23 +37,23 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
-        Toolbar toolbar = new Toolbar(this);
-        toolbar.setTitle("Detail Asset");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        // Setup toolbar with back button
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setTitle("Pilih Jadwal");
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
 
         detailDesc = findViewById(R.id.detailDesc);
-        detailTitle = findViewById(R.id.detailTitle);
         detailImage = findViewById(R.id.detailImage);
         detailPrice = findViewById(R.id.detailPrice);
         inputEmail = findViewById(R.id.input_email);
         buttonSubmit = findViewById(R.id.button_submitPayment);
-        buttonBack = findViewById(R.id.button_backItemPage);
 
         Bundle bundle = getIntent().getExtras();
         if (bundle != null){
             detailDesc.setText(bundle.getInt("Desc"));
             detailImage.setImageResource(bundle.getInt("Image"));
-            detailTitle.setText(bundle.getString("Title"));
+            getSupportActionBar().setTitle(bundle.getString("Title"));
             detailPrice.setText(bundle.getString("Price"));
         }
 
@@ -72,14 +72,6 @@ public class DetailActivity extends AppCompatActivity {
             }
         });
 
-        buttonBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(DetailActivity.this, MainActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
     }
 
     @Override

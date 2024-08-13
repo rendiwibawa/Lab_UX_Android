@@ -1,6 +1,13 @@
 <resources>
     <string name="app_name">Lab UX</string>
 
+    <string name="choose_payment_prompt">Choose Payment</string>
+
+    <string-array name="payment_methods">
+        <item>Visa</item>
+        <item>Master Card</item>
+        <item>Credit Card</item>
+    </string-array>
 
     <string name="BrickKit">A thin wrapper around a millisecond value that allows JDBC to identify this as an SQL DATE
         value. A milliseconds value represents the number of milliseconds that have passed since January 1, 1970 00:00:00.000 GMT.
@@ -32,4 +39,9 @@
         It has been created to make possible construction of any lists with XML layouts as an item
         which can be customized vastly while improving on the efficiency of ListViews and GridViews.
     </string>
+    <string name="warning_icon">Warning Ini</string>
+
+    <!-- to toggle the open close button of the navigation drawer -->
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
 </resources>

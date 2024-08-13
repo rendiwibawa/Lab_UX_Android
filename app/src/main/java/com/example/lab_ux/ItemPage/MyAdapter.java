@@ -1,4 +1,4 @@
-package com.example.lab_ux;
+package com.example.lab_ux.ItemPage;
 
 import android.content.Context;
 import android.content.Intent;
@@ -14,6 +14,8 @@ import java.util.List;
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.lab_ux.R;
 
 public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
 
@@ -53,6 +55,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
                 intent.putExtra("Image", dataList.get(holder.getAdapterPosition()).getDataImage());
                 intent.putExtra("Title", dataList.get(holder.getAdapterPosition()).getDataTitle());
                 intent.putExtra("Desc", dataList.get(holder.getAdapterPosition()).getDataDesc());
+                intent.putExtra("Price", dataList.get(holder.getAdapterPosition()).getDataPrice());
 
                 context.startActivity(intent);
             }

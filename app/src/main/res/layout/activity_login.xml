@@ -25,6 +25,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <ImageView
+            android:layout_marginTop="-30dp"
+            android:layout_marginBottom="60dp"
+            android:layout_width="159dp"
+            android:layout_height="108dp"
+            android:background="@drawable/logo"/>
+
         <LinearLayout
             android:gravity="center"
             android:padding="30dp"
@@ -66,14 +73,13 @@
 
                 <ImageView
                     android:id="@+id/passwordToggle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
                     android:layout_marginRight="10dp"
-                    android:padding="12dp"
-                    android:background="@drawable/image"
-                    android:src="@drawable/image" />
+                    android:background="@drawable/hidden"
+                    android:padding="12dp" />
             </RelativeLayout>
 
             <TextView

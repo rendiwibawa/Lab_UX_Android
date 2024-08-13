@@ -40,10 +40,10 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (isPasswordVisible) {
                     passwordEditText.setTransformationMethod(PasswordTransformationMethod.getInstance());
-                    passwordToggle.setImageResource(R.drawable.image);
+                    passwordToggle.setBackgroundResource(R.drawable.hidden);
                 } else {
                     passwordEditText.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
-                    passwordToggle.setImageResource(R.drawable.image);
+                    passwordToggle.setBackgroundResource(R.drawable.view);
                 }
                 isPasswordVisible = !isPasswordVisible;
                 passwordEditText.setSelection(passwordEditText.length());
@@ -67,7 +67,7 @@ public class LoginActivity extends AppCompatActivity {
             errorMessage.append("Username cannot be empty\n");
         }
 
-        if (password.isEmpty()) {
+        else if (password.isEmpty()) {
             errorMessage.append("Password cannot be empty!\n");
         } else if (password.length() < 8) {
             errorMessage.append("Password must be at least 8 characters long\n");

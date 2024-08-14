@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Toolbar;
@@ -28,6 +29,7 @@ public class DetailActivity extends AppCompatActivity {
     EditText inputEmail;
     Button buttonSubmit;
     ImageButton buttonBack;
+    Spinner paymentMethodSpinner;
     AlertDialog.Builder builderDialog;
     AlertDialog alertDialog;
 
@@ -44,10 +46,15 @@ public class DetailActivity extends AppCompatActivity {
         }
 
         detailDesc = findViewById(R.id.detailDesc);
+        detailTitle = findViewById(R.id.detailTitle);
         detailImage = findViewById(R.id.detailImage);
         detailPrice = findViewById(R.id.detailPrice);
         inputEmail = findViewById(R.id.input_email);
         buttonSubmit = findViewById(R.id.button_submitPayment);
+        buttonBack = findViewById(R.id.button_backItemPage);
+        paymentMethodSpinner = findViewById(R.id.paymentMethodSpinner);
+
+        paymentMethodSpinner.setSelection(0);
 
         Bundle bundle = getIntent().getExtras();
         if (bundle != null){
@@ -72,6 +79,14 @@ public class DetailActivity extends AppCompatActivity {
             }
         });
 
+        buttonBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(DetailActivity.this, HomeActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 
     @Override
@@ -99,7 +114,7 @@ public class DetailActivity extends AppCompatActivity {
             public void onClick(View view) {
                 alertDialog.dismiss();
                 if (isSuccessful){
-                    Intent intent = new Intent(DetailActivity.this, HomeActivity.class);
+                    Intent intent = new Intent(DetailActivity.this, MainActivity.class);
                     startActivity(intent);
                     finish();
                 }

@@ -29,7 +29,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
-    List<DataClass> dataList;
+    public static List<DataClass> dataList;
     MyAdapter adapter;
     DataClass androidData;
     SearchView searchView;

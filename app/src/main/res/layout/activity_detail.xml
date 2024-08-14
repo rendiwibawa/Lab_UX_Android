@@ -118,14 +118,15 @@
                 <EditText
                     android:id="@+id/input_email"
                     android:layout_width="280dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="40dp"
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="40dp"
                     android:hint="Input Email..."
                     android:inputType="textEmailAddress"
                     android:textSize="14sp"
                     android:fontFamily="@font/poppins_medium"
-                    />
+                    android:background="@drawable/input_email_background"
+                    android:paddingLeft="18dp"/>
                 <Spinner
                     android:id="@+id/paymentMethodSpinner"
                     android:layout_width="280dp"

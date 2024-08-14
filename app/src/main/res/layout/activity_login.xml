@@ -45,6 +45,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Hello Again!"
+                android:fontFamily="@font/poppins_bold"
                 android:textColor="@color/background"
                 android:textStyle="bold"
                 android:textSize="35dp"/>
@@ -52,6 +53,7 @@
                 android:id="@+id/usernameEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
                 android:hint="Username"
                 android:inputType="text"
                 android:padding="12dp"
@@ -67,6 +69,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Password"
+                    android:fontFamily="@font/poppins_medium"
                     android:inputType="textPassword"
                     android:padding="12dp"
                     android:background="@drawable/textfiled" />
@@ -84,17 +87,22 @@
 
             <TextView
                 android:id="@+id/alertError"
+                android:textAlignment="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:fontFamily="@font/poppins_semibold"
                 android:textColor="@color/red"
-                android:visibility="gone" />
+                android:visibility="visible" />
             <Button
                 android:id="@+id/loginButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Login"
-                android:layout_marginTop="60dp"
+                android:textSize="18dp"
+                android:textAllCaps="false"
+                android:fontFamily="@font/poppins_bold"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/button" />
         </LinearLayout>
 

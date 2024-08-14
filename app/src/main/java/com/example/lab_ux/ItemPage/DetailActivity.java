@@ -46,12 +46,10 @@ public class DetailActivity extends AppCompatActivity {
         }
 
         detailDesc = findViewById(R.id.detailDesc);
-        detailTitle = findViewById(R.id.detailTitle);
         detailImage = findViewById(R.id.detailImage);
         detailPrice = findViewById(R.id.detailPrice);
         inputEmail = findViewById(R.id.input_email);
         buttonSubmit = findViewById(R.id.button_submitPayment);
-        buttonBack = findViewById(R.id.button_backItemPage);
         paymentMethodSpinner = findViewById(R.id.paymentMethodSpinner);
 
         paymentMethodSpinner.setSelection(0);

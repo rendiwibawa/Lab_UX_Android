@@ -41,6 +41,7 @@
                 android:textStyle="bold"
                 android:textColor="@color/purple"
                 android:textAlignment="center"
+                android:fontFamily="@font/poppins_semibold"
                 android:text="Rendi Prayata"/>
             <LinearLayout
                 android:layout_marginTop="11dp"
@@ -72,6 +73,7 @@
                         />
 
                     <TextView
+                        android:fontFamily="@font/poppins_semibold"
                         android:id="@+id/email"
                         android:textSize="12dp"
                         android:layout_marginLeft="11dp"

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tema aplikasi -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Custom styles go here -->
+    </style>
+
+    <!-- Gaya Custom untuk Menu Option -->
+<!--    <style name="CustomPopupMenu" parent="Widget.AppCompat.PopupMenu.Overflow">-->
+<!--        <item name="android:popupBackground">#C17289DA</item> &lt;!&ndash; Warna ungu &ndash;&gt;-->
+<!--        <item name="android:textColor">#FFFFFF</item>-->
+<!--    </style>-->
+
+    <style name="CustomPopupMenu" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:popupBackground">#C17289DA</item> <!-- Warna ungu -->
+    </style>
+
+    <style name="MenuTextStyle" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+
+</resources>

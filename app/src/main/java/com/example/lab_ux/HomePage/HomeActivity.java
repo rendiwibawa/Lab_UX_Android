@@ -7,6 +7,8 @@ import android.app.Dialog;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.SpannableString;
+import android.text.style.ForegroundColorSpan;
 import android.view.GestureDetector;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -120,9 +122,18 @@ public class HomeActivity extends AppCompatActivity {
     //    MENUU
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.navigation_menu, menu);
+        getMenuInflater().inflate(R.menu.navigation_menu, menu);
+////        MenuInflater inflater = getMenuInflater();
+////        inflater.inflate(R.menu.navigation_menu, menu);
+//
+        for (int i = 0; i < menu.size(); i++) {
+            MenuItem item = menu.getItem(i);
+            SpannableString spanString = new SpannableString(item.getTitle().toString());
+            spanString.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.white)), 0, spanString.length(), 0);
+            item.setTitle(spanString);
+        }
         return true;
+
     }
 
     @Override

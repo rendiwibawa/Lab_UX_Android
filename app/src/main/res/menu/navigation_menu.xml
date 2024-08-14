@@ -6,23 +6,27 @@
         android:id="@+id/nav_home"
         android:title="Home"
         android:textColor="@color/white"
-        android:itemTextAppearance="@style/CustomActionBarTheme" />
+        android:actionLayout="@layout/menu_item_layout"
+        android:itemTextAppearance="@style/MenuItemTextAppearance" />
 
     <item
         android:id="@+id/nav_items"
         android:title="Items"
         android:textColor="@color/white"
+        android:actionLayout="@layout/menu_item_layout"
         android:itemTextAppearance="@style/CustomActionBarTheme" />
 
     <item
         android:id="@+id/nav_profile"
         android:title="Profile"
         android:textColor="@color/white"
+        android:actionLayout="@layout/menu_item_layout"
         android:itemTextAppearance="@style/CustomActionBarTheme" />
 
     <item
         android:id="@+id/nav_logout"
         android:title="Log Out"
         android:textColor="@color/white"
+        android:actionLayout="@layout/menu_item_layout"
         android:itemTextAppearance="@style/CustomActionBarTheme" />
 </menu>

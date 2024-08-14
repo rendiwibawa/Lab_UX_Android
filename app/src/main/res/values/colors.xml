@@ -11,4 +11,5 @@
     <color name="background">#282B30</color>
     <color name="red">#FF0000</color>
     <color name="button">#7289DA</color>
+    <color name="color_menu_item_pressed">#424549</color>
 </resources>

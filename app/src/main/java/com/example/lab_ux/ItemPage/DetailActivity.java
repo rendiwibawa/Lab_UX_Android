@@ -75,7 +75,7 @@ public class DetailActivity extends AppCompatActivity {
         buttonBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(DetailActivity.this, MainActivity.class);
+                Intent intent = new Intent(DetailActivity.this, HomeActivity.class);
                 startActivity(intent);
                 finish();
             }
@@ -106,7 +106,7 @@ public class DetailActivity extends AppCompatActivity {
             public void onClick(View view) {
                 alertDialog.dismiss();
                 if (isSuccessful){
-                    Intent intent = new Intent(DetailActivity.this, HomeActivity.class);
+                    Intent intent = new Intent(DetailActivity.this, MainActivity.class);
                     startActivity(intent);
                     finish();
                 }

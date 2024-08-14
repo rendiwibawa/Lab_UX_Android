@@ -131,7 +131,7 @@ public class ProfileActivity extends AppCompatActivity {
         });
 
         dialog.show();
-        dialog.findViewById(R.id.dialog_container).startAnimation(AnimationUtils.loadAnimation(this, R.anim.flip_up_in));
+//        dialog.findViewById(R.id.dialog_container).startAnimation(AnimationUtils.loadAnimation(this, R.anim.flip_up_in));
     }
 
 

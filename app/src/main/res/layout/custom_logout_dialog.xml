@@ -17,7 +17,8 @@
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:src="@drawable/warningimg"
+            android:src="@drawable/baseline_question_mark_24"
+            android:background="@drawable/question_background"
             android:contentDescription="@string/warning_icon" />
 
         <TextView

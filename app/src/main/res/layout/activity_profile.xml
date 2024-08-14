@@ -41,7 +41,8 @@
                 android:textStyle="bold"
                 android:textColor="@color/purple"
                 android:textAlignment="center"
-                android:fontFamily="@font/poppins_semibold"
+                android:textAllCaps="false"
+                android:fontFamily="@font/poppins_bold"
                 android:text="Rendi Prayata"/>
             <LinearLayout
                 android:layout_marginTop="0dp"

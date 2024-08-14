@@ -108,7 +108,7 @@
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:text="SUMBIT"
+                    android:text="SUBMIT"
                     android:textSize="15dp"
                     android:fontFamily="@font/poppins_bold"/>
 

@@ -78,7 +78,8 @@ public class DetailActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
         if(item.getItemId() == android.R.id.home){
-            onBackPressed();
+            Intent intent = new Intent(DetailActivity.this, HomeActivity.class);
+            startActivity(intent);
             return true;
         }
         return super.onOptionsItemSelected(item);

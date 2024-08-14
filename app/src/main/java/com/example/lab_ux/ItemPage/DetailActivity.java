@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Toolbar;
@@ -28,6 +29,7 @@ public class DetailActivity extends AppCompatActivity {
     EditText inputEmail;
     Button buttonSubmit;
     ImageButton buttonBack;
+    Spinner paymentMethodSpinner;
     AlertDialog.Builder builderDialog;
     AlertDialog alertDialog;
 
@@ -48,6 +50,9 @@ public class DetailActivity extends AppCompatActivity {
         inputEmail = findViewById(R.id.input_email);
         buttonSubmit = findViewById(R.id.button_submitPayment);
         buttonBack = findViewById(R.id.button_backItemPage);
+        paymentMethodSpinner = findViewById(R.id.paymentMethodSpinner);
+
+        paymentMethodSpinner.setSelection(0);
 
         Bundle bundle = getIntent().getExtras();
         if (bundle != null){

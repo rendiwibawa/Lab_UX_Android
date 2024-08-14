@@ -16,7 +16,7 @@
         android:layout_below="@+id/bg1"
         android:layout_width="match_parent"
         android:layout_height="500dp"
-        android:background="@color/purple" />
+        android:background="#7289DA" />
 
     <LinearLayout
         android:padding="30dp"
